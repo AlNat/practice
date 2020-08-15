@@ -61,7 +61,7 @@ public class SortTest {
 
     @Test
     public void quickTest() {
-        int[] testData = generateTestData(10);
+        int[] testData = generateTestData(8);
 
         System.out.println("Before:");
         print(testData);
@@ -75,5 +75,20 @@ public class SortTest {
         Assert.assertArrayEquals(testData, res);
     }
 
+    @Test
+    public void mergerTest() {
+        int[] testData = generateTestData(10);
+
+        System.out.println("Before:");
+        print(testData);
+
+        System.out.println("\n\n\nAfter:");
+        int[] res = MergeSort.sort(Arrays.copyOf(testData, testData.length));
+        print(res);
+
+        Arrays.sort(testData);
+
+        Assert.assertArrayEquals(testData, res);
+    }
 
 }
