@@ -3,8 +3,8 @@ package graph;
 import dev.alnat.practice.graph.Edge;
 import dev.alnat.practice.graph.Graph;
 import dev.alnat.practice.graph.Vertex;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,7 +13,7 @@ import java.util.Collections;
  * Created by @author AlNat on 02.02.2020.
  * Licensed by Apache License, Version 2.0
  */
-public class GraphTest {
+class GraphTest {
 
     /**
      * Генерируем тестовый граф
@@ -47,32 +47,31 @@ public class GraphTest {
     }
 
     @Test
-    public void BFSTest() {
+    void BFSTest() {
         Graph testGraph = generateTestGraph();
 
         System.out.println("Search 3 in BFS");
-        Assert.assertEquals("3", testGraph.bfs("3").getName());
+        Assertions.assertEquals("3", testGraph.bfs("3").getName());
 
         System.out.println("\nSearch 6 in BFS");
-        Assert.assertEquals("6", testGraph.bfs("6").getName());
+        Assertions.assertEquals("6", testGraph.bfs("6").getName());
 
         System.out.println("\nSearch 12 in BFS");
-        Assert.assertNull(testGraph.bfs("12"));
+        Assertions.assertNull(testGraph.bfs("12"));
     }
 
     @Test
-    public void DFSTest() {
+    void DFSTest() {
         Graph testGraph = generateTestGraph();
 
         System.out.println("Search 3 in DFS");
-        Assert.assertEquals("3", testGraph.dfs("3").getName());
+        Assertions.assertEquals("3", testGraph.dfs("3").getName());
 
         System.out.println("\nSearch 6 in DFS");
-        Assert.assertEquals("6", testGraph.dfs("6").getName());
+        Assertions.assertEquals("6", testGraph.dfs("6").getName());
 
         System.out.println("\nSearch 12 in BFS");
-        Assert.assertNull(testGraph.dfs("12"));
+        Assertions.assertNull(testGraph.dfs("12"));
     }
-
 
 }

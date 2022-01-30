@@ -3,8 +3,8 @@ package sort;
 import dev.alnat.practice.sort.BubbleSort;
 import dev.alnat.practice.sort.MergeSort;
 import dev.alnat.practice.sort.QuickSort;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -56,7 +56,7 @@ public class SortTest {
 
         Arrays.sort(testData);
 
-        Assert.assertArrayEquals(testData, res);
+        Assertions.assertArrayEquals(testData, res);
     }
 
     @Test
@@ -72,7 +72,7 @@ public class SortTest {
 
         Arrays.sort(testData);
 
-        Assert.assertArrayEquals(testData, res);
+        Assertions.assertArrayEquals(testData, res);
     }
 
     @Test
@@ -88,7 +88,7 @@ public class SortTest {
 
         Arrays.sort(testData);
 
-        Assert.assertArrayEquals(testData, res);
+        Assertions.assertArrayEquals(testData, res);
     }
 
 }
